@@ -1,0 +1,29 @@
+import java.util.Scanner;
+import java.util.*;
+class BubbleSort{
+ public static void main(String args[]) {
+ 	int n,i,j,temp;
+     int a[]  = new int[100]; 
+ 	System.out.println("ENTER THE SIZE OF AN ARRAY:");
+ 	Scanner s=new Scanner(System.in);
+     n=s.nextInt();
+ 	System.out.println("ENTER THE ELEMENTS OF AN ARRAY\n");
+ 	for(i=0;i<n;i++) {
+ 	
+ 		a[i]=s.nextInt();
+	 }
+	System.out.println("THE ELMENTS AFTER BUBBLE SORTING IS:");
+	for(i=0;i<n-1;i++) {
+		for(j=0;j<n-1-i;j++) {
+			if(a[j]>a[j+1]) {
+			temp=a[j];
+			a[j]=a[j+1];
+			a[j+1]=temp;
+		}
+	}
+	}
+	for(i=0;i<n;i++) {
+		System.out.println(a[i]);
+	}
+ }
+}
